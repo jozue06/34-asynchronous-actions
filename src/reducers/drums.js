@@ -3,6 +3,9 @@ import superagent from 'superagent';
 
 // Action type
 export const ADD = 'Drum/ADD';
+export const GET = 'Drum/GET';
+export const UPDATE = 'Drums/UPDATE';
+
 export const DELETE = 'Drum/DELETE';
 
 const ENV = {};
@@ -60,7 +63,7 @@ export const deleteDrum = (drum) => dispatch => {
   superagent.delete(`${ENV.apiUrl}/api/v1/drums/${id}`)
   .then(dispatch({
     type: DELETE,
-    payload: drumset
+    payload: drum
   }));
  
 }

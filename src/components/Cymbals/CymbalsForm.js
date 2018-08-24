@@ -43,7 +43,7 @@ export default class CymbalsForm extends Component {
   }
 }
 
-ExpenseForm.propTypes = {
+CymbalsForm.propTypes = {
   onComplete: PropTypes.func.isRequired,
   buttonText: PropTypes.string.isRequired,
 }

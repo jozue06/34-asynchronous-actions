@@ -4,6 +4,8 @@ import superagent from 'superagent';
 
 // Action type
 export const ADD = 'DrumSet/ADD';
+export const GET = 'DrumSet/GET';
+export const UPDATE = 'DrumSet/UPDATE';
 export const DELETE = 'DrumSet/DELETE';
 
 const ENV = {};
@@ -47,7 +49,7 @@ export default function reducer(state = defaultState, action) {
 
 // Action Creators
 export const addDrumSet = (drumset) => dispatch => {
-  superagent.post(`${ENV.apiUrl}/api/drumset`, drumset)
+  superagent.post(`${ENV.apiUrl}/api/v1/drumSet`, drumset)
   .then(res => 
     dispatch({
     type: ADD,
@@ -58,7 +60,7 @@ export const addDrumSet = (drumset) => dispatch => {
 
 export const deleteDrumSet = (drumset) => dispatch => {
   let id = drumset._id
-  superagent.delete(`${ENV.apiUrl}/api/drumset/${id}`)
+  superagent.delete(`${ENV.apiUrl}/api/v1/drumSet/${id}`)
   .then(dispatch({
     type: DELETE,
     payload: drumset
@@ -68,7 +70,7 @@ export const deleteDrumSet = (drumset) => dispatch => {
 
 export const getDrumSet = () => dispatch => {
   superagent
-  .get(`${ENV.apiUrl}/api/drumset`)
+  .get(`${ENV.apiUrl}/api/v1/drumSet`)
   .then(res =>
   dispatch({
     type: GET,
@@ -78,7 +80,7 @@ export const getDrumSet = () => dispatch => {
 }
 
 export const updateDrumSet = (drumset) => dispatch => {
-  superagent.put(`${ENV.apiUrl}/api/drumset`, drumset)
+  superagent.put(`${ENV.apiUrl}/api/v1/drumSet`, drumset)
   .then(res => dispatch({
     type: UPDATE,
     payload: res.body

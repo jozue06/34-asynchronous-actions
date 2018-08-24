@@ -4,6 +4,8 @@ import superagent from 'superagent';
 
 // Action type
 export const ADD = 'Cymbals/ADD';
+export const UPDATE = 'Cymbals/UPDATE';
+export const GET = 'Cymbals/GET';
 export const DELETE = 'Cymbals/DELETE';
 
 const ENV = {};
