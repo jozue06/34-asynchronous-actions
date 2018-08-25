@@ -1,5 +1,5 @@
-## Josh lab 33
+## Josh lab 34
 
-[![Build Status](https://travis-ci.com/jozue06/33-redux-middleware.svg?branch=josh)](https://travis-ci.com/jozue06/33-redux-middleware)
+### Please go to https://lab34-frontend.herokuapp.com/
 
-yaysys
+yaysies worksies
