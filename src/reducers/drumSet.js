@@ -49,6 +49,7 @@ export default function reducer(state = defaultState, action) {
 
 // Action Creators
 export const addDrumSet = (drumset) => dispatch => {
+  // create drum set object with drum id and cymbal id do nested or async/await.
   superagent.post(`${ENV.apiUrl}/api/v1/drumSet`, drumset)
   .then(res => 
     dispatch({

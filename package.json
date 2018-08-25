@@ -1,7 +1,7 @@
 {
   "name": "32",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "enzyme": "^3.4.1",
