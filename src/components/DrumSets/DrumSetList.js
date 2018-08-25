@@ -20,8 +20,8 @@ const DrumSetList = (props) => {
       
       <S.Button drumset={drumset} onClick={() => props.deleteDrumSet(drumset)} >Remove Drum Set</S.Button>
       <br />
-        <DrumsForm key={drumset.id} buttonText="add a drum" onComplete={props.addDrum} drumID={drumset.id}/> 
-        <DrumsList drums={props.drums} id={drumset.id} deleteDrum={props.deleteDrum} />
+        <DrumsForm key={drumset._id} buttonText="add a drum" onComplete={props.addDrum} drumID={drumset._id}/> 
+        <DrumsList drums={props.drums} id={drumset.id} deleteDrum={props.deleteDrum} > List of drums </DrumsList>
         <br />
         <CymbalsForm  buttonText="add a cymbal" onComplete={props.addCymbal} cymbalID={drumset.id}/> 
         <CymbalsList cymbals={props.cymbals} id={drumset.id} deleteCymbal={props.deleteCymbal} />
